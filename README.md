@@ -5,6 +5,8 @@ This project is a fork for: [Ansible-Galaxy-Stouts](https://github.com/Stouts/St
 ## We add this validation:
 
 ### 1.- `To validate first if the user/group {kibana_user}. {kibana_group}.`
+```yaml
+---
 - name: install - create group
   group:
     name: "{{ kibana_group }}"
@@ -22,6 +24,7 @@ This project is a fork for: [Ansible-Galaxy-Stouts](https://github.com/Stouts/St
     system: yes
     state: present
   sudo: yes
+---
 
 ### 2.- `We add an example about how do we could use the role "ansible-role-kibana-ds".`
 /ansible-role-kibana-ds/tree/master/examples/site_playbook_kibana_role.yml

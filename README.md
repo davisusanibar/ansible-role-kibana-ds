@@ -26,7 +26,21 @@ This project is a fork for: [Ansible-Galaxy-Stouts](https://github.com/Stouts/St
   sudo: yes
 ```
 
-### 2.- `We add an example about how do we could use the role "ansible-role-kibana-ds".`
+### 2.- `We add a file to support RHEL-6 integration.`
+```yaml
+- name: kibana-configure | Setup service | RHEL Version
+  template:
+    dest: /etc/init.d/kibana
+    src: rhel.conf.j2
+    owner: "{{kibana_user}}"
+    group: "{{kibana_group}}"
+    mode: 0755
+  notify: kibana restart
+  when: ansible_os_family == 'RedHat'
+  sudo: yes
+```  
+
+### 3.- `We add an example about how do we could use the role "ansible-role-kibana-ds".`
 /ansible-role-kibana-ds/tree/master/examples/site_playbook_kibana_role.yml
 
 ```yaml

@@ -2,7 +2,7 @@
 
 kibana_enabled: yes                        # The role is enabled
 kibana_version: "{{kibana_version} | default(4.1.1)"                      # Set version
-kibana_os_version: "{{kibana_os_version} | default(linux-x64)"
+kibana_os_version: "{{kibana_os_version} | default(likenux-x64)"
 kibana_url: https://download.elastic.co/kibana/kibana/kibana-{{kibana_version}}-{{kibana_os_version}}.tar.gz
 
 kibana_home: "{{kibana_home} | default(/var/www/kibana)"
@@ -14,7 +14,7 @@ kibana_port: "{{kibana_port | default(5601)}}"
 kibana_host: 0.0.0.0
 
 # The Elasticsearch instance to use for all your queries.
-kibana_elasticsearch_url: "http://{{inventory_elastic_hostname | default(localhost)}}:{{inventory_elastic_port | default(9200)"
+kibana_elasticsearch_url: "http://{{inventory_elastic_hostname | default(localhost)}}:{{inventory_elastic_port | default(9200)}}"
 
 # preserve_elasticsearch_host true will send the hostname specified in `elasticsearch`. If you set it to false,
 # then the host you use to connect to *this* Kibana instance will be sent.

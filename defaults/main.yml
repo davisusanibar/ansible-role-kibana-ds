@@ -10,7 +10,7 @@ kibana_user: www-data
 kibana_group: "{{kibana_user}}"
 
 # Kibana is served by a back end server
-kibana_port: 8005
+kibana_port: "{{kibana_port | default(5601)}}"
 kibana_host: 0.0.0.0
 
 # The Elasticsearch instance to use for all your queries.

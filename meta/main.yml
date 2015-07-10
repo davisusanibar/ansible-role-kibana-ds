@@ -11,6 +11,9 @@ galaxy_info:
   - name: Ubuntu
     versions:
     - all
+  - name: RHEL
+    versions:
+    - 6.0
   categories:
   - system
   - monitoring

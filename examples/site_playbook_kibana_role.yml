@@ -1,0 +1,12 @@
+- hosts: localhost
+  roles:
+    - role: ansible-role-kibana-ds
+  vars:
+    - kibana_version: 4.1.1
+    - kibana_os_version: linux-x64
+    - kibana_home: /var/www/kibana
+    - kibana_user: www-data-elastic
+    - kibana_group: www-data-elastic
+    - kibana_port: 8004
+    - inventory_elastic_hostname: localhost
+    - inventory_elastic_port: 8010

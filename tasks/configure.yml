@@ -7,8 +7,8 @@
   template:
     dest: /etc/init.d/kibana
     src: rhel.conf.j2
-    owner: {{kibana_user}}
-    group: {{kibana_group}}
+    owner: "{{kibana_user}}"
+    group: "{{kibana_group}}"
     mode: 0755
   notify: kibana restart
   when: ansible_os_family == 'RedHat'

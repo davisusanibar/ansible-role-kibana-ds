@@ -1,9 +1,9 @@
 ---
-- name: install - stop kibana if already installed
-  service:
-    name: kibana
-    state: stopped
-  sudo: yes
+#- name: install - stop kibana if already installed
+#  service:
+#    name: kibana
+#    state: stopped
+#  sudo: yes
 
 - name: install - create group
   group:

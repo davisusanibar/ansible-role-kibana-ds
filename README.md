@@ -24,7 +24,7 @@ This project is a fork for: [Ansible-Galaxy-Stouts](https://github.com/Stouts/St
     system: yes
     state: present
   sudo: yes
----
+```
 
 ### 2.- `We add an example about how do we could use the role "ansible-role-kibana-ds".`
 /ansible-role-kibana-ds/tree/master/examples/site_playbook_kibana_role.yml
